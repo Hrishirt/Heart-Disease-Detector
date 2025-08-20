@@ -44,7 +44,7 @@ By default, classifiers use a threshold of **0.5** to decide between “disease�
 - Lowering the threshold (e.g. `0.3`) → **higher recall** (catch more true disease cases) but lower precision (more false alarms).  
 - Raising the threshold (e.g. `0.9`) → **higher precision** (fewer false alarms) but lower recall (miss more true cases).  
 
-💡 In medical applications, **recall is often prioritized** — it’s usually safer to flag more patients for follow-up than to miss someone with a condition.  
+NOTE: In medical applications, **recall is often prioritized** it’s usually safer to flag more patients for follow-up than to miss someone with a condition.  
 
 ---
 
@@ -57,3 +57,4 @@ log_reg.fit(X_train, y_train)
 # Predict probability for a new patient
 proba = log_reg.predict_proba(new_patient)[:,1]
 pred  = int(proba >= 0.3)   # threshold can be tuned
+
